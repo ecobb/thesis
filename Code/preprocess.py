@@ -24,6 +24,7 @@ def preprocess(audio_file, step_size=5, viterbi=True, save_freq_and_conf=False,
 
 
 if __name__ == "__main__":
+    # TODO: have to change directories of test files
     audio_file = "audio/test/maisky_scale.wav"
     audio_file = "audio/test/test.wav"
 
