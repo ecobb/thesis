@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>unit9.py &mdash; 21M.387 Library  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="unit8.py" href="unit8.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> 21M.387 Library
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="unit1.html">unit1.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit2.html">unit2.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit3.html">unit3.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit4.html">unit4.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit5.html">unit5.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit6.html">unit6.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit7.html">unit7.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit8.html">unit8.py</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">unit9.py</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">21M.387 Library</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>unit9.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/unit9.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-fmplib.unit9">
+<span id="unit9-py"></span><h1>unit9.py<a class="headerlink" href="#module-fmplib.unit9" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit9.hpss">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit9.</span></span><span class="sig-name descname"><span class="pre">hpss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fft_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2048</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h_filt_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">13</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_filt_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">soft_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit9.hpss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform harmonic / percussive source separation using soft masks</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – the input audio signal</p></li>
+<li><p><strong>fft_len</strong> – the fft length used to create the spectrogram</p></li>
+<li><p><strong>h_filt_len</strong> – the window length used for harmonic median filtering</p></li>
+<li><p><strong>p_filt_len</strong> – the window length used for percussive median filtering</p></li>
+<li><p><strong>soft_mask</strong> – Use a soft mask (Wiener filtering) if True. Otherwise, use a binary mask.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple of (x_h, x_p), where <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x_h</span> <span class="pre">+</span> <span class="pre">x_p</span></code> and each represents the harmonic / percussive components of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit9.hpss_masks">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit9.</span></span><span class="sig-name descname"><span class="pre">hpss_masks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec_h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">soft_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit9.hpss_masks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create soft or binary masks from harmonic and percussive filtered spectrograms</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spec_h</strong> – the harmonic spectrogram</p></li>
+<li><p><strong>spec_p</strong> – the percussive spectrogram</p></li>
+<li><p><strong>soft_mask</strong> – Create soft masks (Wiener filtering) if True. Otherwise, create binary masks.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the tuple (mask_h, mask_p), where mask_h and mask_p are the harmonic and percussive masks.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit9.istft">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit9.</span></span><span class="sig-name descname"><span class="pre">istft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hop_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">centered</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_windowing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit9.istft" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform the inverse short time Fourier transform. Assumes that the STFT was created with a hanning window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> – the complex spectrum, assumed to be the first half + 1 of the full complex spectrum</p></li>
+<li><p><strong>hop-size</strong> – the hop size used in the original stft</p></li>
+<li><p><strong>centered</strong> – if the original stft was created with centered windows.</p></li>
+<li><p><strong>ignore_windowing</strong> – do not undo the effects of windowing.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a 1d-array of the reconstructed signal</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit9.make_nmf_note_model">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit9.</span></span><span class="sig-name descname"><span class="pre">make_nmf_note_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fft_len</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit9.make_nmf_note_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an NMF-suitable template vector that models the harmonics of a note, where a set of bins around the note’s harmonics are given the value 1/h. The width is set as +/- 0.5 semitones around the fundamental frequency.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fs</strong> – the sample rate used to create the note template</p></li>
+<li><p><strong>fft_len</strong> – the fft length for this template. The output vector length is therefore <code class="docutils literal notranslate"><span class="pre">fft_len</span> <span class="pre">//</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">1</span></code></p></li>
+<li><p><strong>pitch</strong> – midi pitch of fundamental frequency for the note</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a vector of frequency bins with energy distributed as 1/h across harmonics of the given note.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit9.make_nmf_template">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit9.</span></span><span class="sig-name descname"><span class="pre">make_nmf_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fft_len</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitches</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit9.make_nmf_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an NMF-suitable template matrix for a collection of pitches. See <a class="reference internal" href="#fmplib.unit9.make_nmf_note_model" title="fmplib.unit9.make_nmf_note_model"><code class="xref py py-meth docutils literal notranslate"><span class="pre">make_nmf_note_model()</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fs</strong> – the sample rate used to create the note templates</p></li>
+<li><p><strong>fft_len</strong> – the fft length for this template. The number of rows is K = <code class="docutils literal notranslate"><span class="pre">fft_len</span> <span class="pre">//</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">1</span></code></p></li>
+<li><p><strong>pitches</strong> – a list of midi pitches, the length of which is R, number of columns.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>W, a K x R templates matrix</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit9.mask_and_reconstruct">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit9.</span></span><span class="sig-name descname"><span class="pre">mask_and_reconstruct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">W</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Hsub</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stft</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hop_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit9.mask_and_reconstruct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a NMF-based soft mask, apply it to a STFT, and reconstruct the signal using ISTFT</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>W</strong> – The templates matrix</p></li>
+<li><p><strong>H</strong> – The activations matrix</p></li>
+<li><p><strong>Hsub</strong> – a filtered activations matrix, containing a subset of activations for mask-creation</p></li>
+<li><p><strong>stft</strong> – The original STFT to be masked</p></li>
+<li><p><strong>hop_size</strong> – The hop size used to create the STFT</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple of the mask and the post-masking reconstructed signal</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit9.merge_mag_phase">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit9.</span></span><span class="sig-name descname"><span class="pre">merge_mag_phase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mtx1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mtx2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit9.merge_mag_phase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge the magnitude of one matrix with the phase of another matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mtx1</strong> – matrix with magnitude values (need not be complex)</p></li>
+<li><p><strong>mtx2</strong> – matrix with phase values</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a complex-valued matrix whose magnitude is from mtx1 and phase is from mtx2</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit9.nmf">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit9.</span></span><span class="sig-name descname"><span class="pre">nmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">V</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Wi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Hi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit9.nmf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform non-negative matrix factorization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>V</strong> – target values matrix</p></li>
+<li><p><strong>Wi</strong> – initial templates matrix</p></li>
+<li><p><strong>Hi</strong> – initial activations matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the tuple (W, H), the optimized templates and activations matrices where ||V - WH||^2 is minimized</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit9.nmf_descent_stages">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit9.</span></span><span class="sig-name descname"><span class="pre">nmf_descent_stages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">V</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Wi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Hi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit9.nmf_descent_stages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform non-negative matrix factorization, but outputs intermediate stages of W and H for visual illustration</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>V</strong> – target values matrix</p></li>
+<li><p><strong>Wi</strong> – initial templates matrix</p></li>
+<li><p><strong>Hi</strong> – initial activations matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of stages in the NMF. Each item being the tuple (iter_num, W, H, err)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="unit8.html" class="btn btn-neutral float-left" title="unit8.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Eran Egozy.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

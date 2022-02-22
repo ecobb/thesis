@@ -1,0 +1,454 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>unit6.py &mdash; 21M.387 Library  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="unit7.py" href="unit7.html" />
+    <link rel="prev" title="unit5.py" href="unit5.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> 21M.387 Library
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="unit1.html">unit1.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit2.html">unit2.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit3.html">unit3.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit4.html">unit4.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit5.html">unit5.py</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">unit6.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit7.html">unit7.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit8.html">unit8.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit9.html">unit9.py</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">21M.387 Library</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>unit6.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/unit6.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-fmplib.unit6">
+<span id="unit6-py"></span><h1>unit6.py<a class="headerlink" href="#module-fmplib.unit6" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.calc_chord_score">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">calc_chord_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">est</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.calc_chord_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the score for an estimated chord array compared to a reference chord array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>est</strong> – an array of estimated chords at each sample</p></li>
+<li><p><strong>ref</strong> – an array of “ground truth” chords at each sample</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the ratio of correctly scored samples to the total number of samples</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.calc_scores_and_estimate_chords">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">calc_scores_and_estimate_chords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chroma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.calc_scores_and_estimate_chords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate chord scores for each timestep in the chromagram and give the best estimate chords for each time step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chroma</strong> – input chromagram</p></li>
+<li><p><strong>alpha</strong> – decay factor for overtone series of chord template</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple (scores, estimates), where scores is a 24xchroma.shape[1] matrix and estimates is an array of length chroma.shape[1]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.estimate_chords">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">estimate_chords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chroma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.estimate_chords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives best estimate chords for each time step in chroma</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chroma</strong> – input chromagram</p></li>
+<li><p><strong>alpha</strong> – decay factor for overtone series of chord template</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an array of length chroma.shape[1]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.get_score_stats">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">get_score_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">est</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.get_score_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the score for an estimated chord array compared to a reference chord array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>est</strong> – an array of estimated chords at each sample</p></li>
+<li><p><strong>ref</strong> – an array of “ground truth” chords at each sample</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the tuple (correct, total, score), where correct is the number of correctly identified samples, total is the total number of (valid) samples, and score is the ratio of correctly scored samples to the total number of samples</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.harmonics_chord_template">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">harmonics_chord_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitches</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.harmonics_chord_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a chord template containing the given pitches. Each pitch contributes to the chord template with the first 8 harmonics in the overtone series with energy decay given by alpha (set to 0 for no overtones).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pitches</strong> – list of pitches</p></li>
+<li><p><strong>alpha</strong> – decay factor for overtone series (default 0)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a normalized np array of length 12</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.hmm_generate">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">hmm_generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trans_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emit_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.hmm_generate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given initial probabilities, transition probabilities, and emission probabilities, generate a sequence of states and observations of specified length. The sequence is generated by calling on the np random number generator with the proper probabilities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>init_p</strong> – initial probabilities</p></li>
+<li><p><strong>trans_p</strong> – transition probabilities</p></li>
+<li><p><strong>emit_p</strong> – emission probabilities</p></li>
+<li><p><strong>length</strong> – length of sequence to generate</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(states, observations), where states and observations are numpy arrays of the specified length</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.make_emission_prob">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">make_emission_prob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.make_emission_prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate an emission probability matrix, based off of how similar one chord template is to another.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>alpha</strong> – decay factor for overtone series of chord template</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a 24x24 emission probability matrix</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.make_regular_transition_prob">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">make_regular_transition_prob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diag_ratio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.make_regular_transition_prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a simple transition probability matrix, with high probability of self-transition and equal probability of any other transition</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>diag_ratio</strong> – the ratio of self-transition probability to any other transition probability</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a 24x24 transition probability matrix</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.make_triads_templates">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">make_triads_templates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.make_triads_templates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build template for all major and all minor triads.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>alpha</strong> – decay factor for overtone series (default 0)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A 24x12 chord template matrix (major triads then minor triads)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.markov_generate">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">markov_generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trans_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.markov_generate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given initial probabilities and transition probabilities, generate a sequence of specified length. 
+The sequence is generated by calling on the numpy random number generator with the proper probabilities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>init_p</strong> – initial probabilities</p></li>
+<li><p><strong>trans_p</strong> – transition probabilities</p></li>
+<li><p><strong>length</strong> – length of sequence to generate</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a sequence with the length specified by the input generated by the Markov model described by init_p and trans_p</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.markov_sequence_prob">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">markov_sequence_prob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trans_p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.markov_sequence_prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a sequence of states, initial probability vector, and transition probability matrix, 
+return the probability of generating that sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>seq</strong> – sequence of states</p></li>
+<li><p><strong>init_p</strong> – initial probabilities</p></li>
+<li><p><strong>trans_p</strong> – transition probability matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the probability of generating seq</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.normalize_prob">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">normalize_prob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.normalize_prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalize matrix m as a probability matrix, so that all rows sum up to 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>m</strong> – the matrix to normalize</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a normalized matrix</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.synthesize_sequence">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">synthesize_sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">notes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.synthesize_sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renders a series of notes into audio, where each note is a tapered sine tone.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>notes</strong> – array of tuples (pitch, start, len) where pitch is the MIDI pitch, and start and length define the location and duration of the note in seconds.</p></li>
+<li><p><strong>fs</strong> – audio sampling rate</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit6.temporal_smoothing">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit6.</span></span><span class="sig-name descname"><span class="pre">temporal_smoothing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mtx_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_len</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rect'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit6.temporal_smoothing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply temporal smoothing to each row of a matrix over each win_len with weights depending on win_type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mtx_in</strong> – matrix to smooth</p></li>
+<li><p><strong>win_len</strong> – length of window for smoothing</p></li>
+<li><p><strong>win_type</strong> – ‘rect’ for rectangular window (default), otherwise use Hann window</p></li>
+<li><p><strong>normalize</strong> – boolean</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a np.matrix with the same shape as mtx_in</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="unit7.html" class="btn btn-neutral float-right" title="unit7.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="unit5.html" class="btn btn-neutral float-left" title="unit5.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Eran Egozy.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

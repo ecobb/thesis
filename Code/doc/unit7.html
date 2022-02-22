@@ -1,0 +1,473 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>unit7.py &mdash; 21M.387 Library  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="unit8.py" href="unit8.html" />
+    <link rel="prev" title="unit6.py" href="unit6.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> 21M.387 Library
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="unit1.html">unit1.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit2.html">unit2.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit3.html">unit3.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit4.html">unit4.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit5.html">unit5.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit6.html">unit6.py</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">unit7.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit8.html">unit8.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit9.html">unit9.py</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">21M.387 Library</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>unit7.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/unit7.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-fmplib.unit7">
+<span id="unit7-py"></span><h1>unit7.py<a class="headerlink" href="#module-fmplib.unit7" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.audio_to_ssm">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">audio_to_ssm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">snd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cens_filt_len</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cens_ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fft_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4096</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.audio_to_ssm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a self-similarity matrix (SSM) from an audio signal by using CENS as the
+feature set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>snd</strong> – the audio signal</p></li>
+<li><p><strong>cens_filt_len</strong> – the CENS filter length</p></li>
+<li><p><strong>cens_ds</strong> – the CENS downsample rate</p></li>
+<li><p><strong>fft_len</strong> – the length of the FFT used in creating the initial chromagram, before CENS is applied.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple <code class="docutils literal notranslate"><span class="pre">(ssm,</span> <span class="pre">ff)</span></code> where <code class="docutils literal notranslate"><span class="pre">ssm</span></code> is the self-similarity matrix, and <code class="docutils literal notranslate"><span class="pre">ff</span></code> is its the feature rate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.calc_prf">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">calc_prf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">est</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.calc_prf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given estimated values and reference values, and based on the match criteria of <code class="docutils literal notranslate"><span class="pre">|e</span> <span class="pre">-</span> <span class="pre">r|</span> <span class="pre">&lt;</span> <span class="pre">tau</span></code>, calculate Precision, Recall, and F-measure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>est</strong> – an array of estimate values</p></li>
+<li><p><strong>ref</strong> – an array of reference values</p></li>
+<li><p><strong>tau</strong> – the distance criteria to determine a match</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the tuple (P, R, F) with values for Precision, Recall, and F-measure.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.column_derivative">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">column_derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_len</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.column_derivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a derivative kernel of length <code class="docutils literal notranslate"><span class="pre">k_len</span></code> and apply it to input matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.
+The kernel is slid from left to right. At each step, compute the sum of element-wise products for each
+row, thus creating a column vector. The length of this column vector is the value of the output
+novelty function at each point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m</strong> – the input matrix</p></li>
+<li><p><strong>k_len</strong> – the length of the derivative kernel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an array of values representing a novelty curve for matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.diagonal_novelty">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">diagonal_novelty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_len</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.diagonal_novelty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slide a checkerboard kernel along the main diagonal of a self-similarity matrix to produce
+a boundaries novelty curve. At each point, compute the sum of the element-wise products of the 
+SSM and the checkerboard.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ssm</strong> – an (N x N) self-similarity matrix</p></li>
+<li><p><strong>cb_len</strong> – the size of the checkerboard to use</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an array of length N, the boundaries novelty curve.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.diagonal_slide">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">diagonal_slide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.diagonal_slide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slide the given kernel along the main diagonal of a self-similarity matrix to produce
+a novelty curve. At each point, compute the sum of the element-wise products of the 
+SSM and the kernel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ssm</strong> – an (N x N) self-similarity matrix</p></li>
+<li><p><strong>kernel</strong> – a (L x L) kernel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an array of length N, the novelty curve.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.diagonal_smoothing">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">diagonal_smoothing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_len</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.diagonal_smoothing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a low pass averaging filter across all the diagonals of the input matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m</strong> – the input matrix</p></li>
+<li><p><strong>win_len</strong> – the window length used for smoothing via uniform averaging</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a matrix of the same dimensions as <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.find_region_peaks">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">find_region_peaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region_len</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.find_region_peaks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the highest peaks within a neighborhood around each peak.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – the input signal</p></li>
+<li><p><strong>region_len</strong> – the size of the neighborhood</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an array peaks found in <code class="docutils literal notranslate"><span class="pre">x</span></code>, where each peek is guaranteed to be at least <code class="docutils literal notranslate"><span class="pre">region_len</span></code> away from any other peak.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.make_2d_gaussian">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">make_2d_gaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wlen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.make_2d_gaussian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a 2D Gaussian kernel, centered in the middle of the matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wlen</strong> – the length of the Gaussian kernel</p></li>
+<li><p><strong>eps</strong> – the degree of Gaussian tapering to apply - equal to the standard deviation in the Gaussian function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a matrix of shape <code class="docutils literal notranslate"><span class="pre">(wlen,</span> <span class="pre">wlen)</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.make_checkerboard">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">make_checkerboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cb_len</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gaussian</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.make_checkerboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Gaussian checkerboard kernel with positive values on the main diagonal 
+and negative values on the off-diagonal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cb_len</strong> – the full length of the checkerboard. Value should be even.</p></li>
+<li><p><strong>gaussian</strong> – if True, make output a Gaussian-tapered checkerboard. Otherwise, make a binary checkerboard.</p></li>
+<li><p><strong>normalize</strong> – if True, normalize output to sum to 1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a matrix of shape <code class="docutils literal notranslate"><span class="pre">(cb_len,</span> <span class="pre">cb_len)</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.make_derivative_kernel">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">make_derivative_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_len</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.make_derivative_kernel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a rectangular kernel of size <code class="docutils literal notranslate"><span class="pre">(rows,</span>&#160; <span class="pre">k_len)</span></code> that can be used to differentiate
+the columns of a matrix. All resulting rows of the kernel are equal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rows</strong> – the desired number of rows</p></li>
+<li><p><strong>k_len</strong> – the desired length (number of columns)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a kernel of shape <code class="docutils literal notranslate"><span class="pre">(rows,</span>&#160; <span class="pre">k_len)</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.make_lag_matrix">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">make_lag_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.make_lag_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a time-lag matrix by circular shifting the nth column of a matrix by n steps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – the input matrix (must be square)</p></li>
+<li><p><strong>region_len</strong> – the size of the neighborhood</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a matrix of the same dimensions as <code class="docutils literal notranslate"><span class="pre">s</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.make_ssm">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">make_ssm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.make_ssm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a self-similarity matrix (SSM) from a time series, where 
+each element is compared to every other element using the dot product.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>f</strong> – a N x M time series of feature vectors</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the SSM matrix of size M x M</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.pos_neg_split">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">pos_neg_split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">est</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.pos_neg_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate estimated values against reference values, returning positive and negative match results
+for each set. Positive matches are based on the criteria of <code class="docutils literal notranslate"><span class="pre">|e</span> <span class="pre">-</span> <span class="pre">r|</span> <span class="pre">&lt;</span> <span class="pre">tau</span></code>. The estimates array
+and reference array are sorted into two lists: matches (positives) and non-matches (negatives).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>est</strong> – an array of estimate values</p></li>
+<li><p><strong>ref</strong> – an array of reference values</p></li>
+<li><p><strong>tau</strong> – the distance criteria to determine a match</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple of four arrays <code class="docutils literal notranslate"><span class="pre">(est_pos,</span> <span class="pre">est_neg,</span> <span class="pre">ref_pos,</span> <span class="pre">ref_neg)</span></code> where each array is the positive or negative subset of the corresponding input array. By definition, <code class="docutils literal notranslate"><span class="pre">len(est_pos)</span> <span class="pre">==</span> <span class="pre">len(ref_pos)</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fmplib.unit7.thresh_and_scale">
+<span class="sig-prename descclassname"><span class="pre">fmplib.unit7.</span></span><span class="sig-name descname"><span class="pre">thresh_and_scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fmplib.unit7.thresh_and_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply thresholding and scaling to the input matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m</strong> – the input matrix. All values must be &lt;= 1.</p></li>
+<li><p><strong>tau</strong> – the threshold value in the range [0,1]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a matrix of the same dimensions as <code class="docutils literal notranslate"><span class="pre">m</span></code>. All values of <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">&lt;</span> <span class="pre">tau</span></code> are set to 0. Then all values from <code class="docutils literal notranslate"><span class="pre">[tau,</span> <span class="pre">1]</span></code> are expanded to the range <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="unit8.html" class="btn btn-neutral float-right" title="unit8.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="unit6.html" class="btn btn-neutral float-left" title="unit6.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Eran Egozy.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
