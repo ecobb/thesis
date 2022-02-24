@@ -457,27 +457,6 @@ def compute_pair_wise_intervals(note_dict):
     return intervals
 
 
-def calculate_cost_scale(ref_pitch, tuning_system, scale):
-    """
-    For a given reference pitch, compute the cost of a scale instance's estimated
-    fundamental frequencies with its theoretical values based on the provided
-    intonation system.
-
-    ref_pitch: float, frequency which scale frequencies are based on.
-    tuning_system: 'just', 'edo', or 'pythagorean'
-    scale: list of tuples in form (note_name, frequency)
-
-    """
-    scale_template = create_scale_template(ref_pitch, tuning_system)
-    # extract frequency estimates
-    scale_freq = np.array([scale[i][1] for i in range(len(scale))][::-1])
-
-    scale_delta = (np.abs(scale_template - scale_freq)).astype(float)
-    scale_delta_norm = np.linalg.norm(scale_delta)
-
-    return scale_delta_norm
-
-
 def identify_tuning_system(ref_pitch, scale_freq):
     tuning_systems = ['just', 'edo', 'pythagorean']
     tuning_systems_costs = []
@@ -493,11 +472,12 @@ def identify_tuning_system(ref_pitch, scale_freq):
 
 
 if __name__ == "__main__":
-    # mid_file = "../Audio/midi/suite_3/cs3-1pre.mid"
+    # mid_file = "/Users/ethancobb/Documents/Thesis Data/Audio/midi/suite_3/cs3-1pre.mid"
     # actual_notes = load_actual_notes(mid_file)
     step_size = 5
-    # time, frequency, confidence, act = run_crepe("../audio/test/maisky_scale.wav", step_size)
-    time, frequency, confidence, act = run_crepe("../audio/test/test.wav", step_size)
+    # time, frequency, confidence, act = run_crepe("/Users/ethancobb/Documents/Thesis
+    # Data/Audio/test/maisky_scale.wav", step_size)
+    time, frequency, confidence, act = run_crepe("/Users/ethancobb/Documents/Thesis Data/Audio/test/test.wav", step_size)
 
     frequency_clean, conf_perc = clean_frequency(frequency, confidence, conf_thresh=.9)
     print(conf_perc)

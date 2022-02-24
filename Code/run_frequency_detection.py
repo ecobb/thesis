@@ -76,9 +76,9 @@ def run_frequency_detection3(audio_file, step_size=5, viterbi=True, save_freq_an
 
 
 if __name__ == "__main__":
-    wav_file_scale = "audio/test/maisky_scale.wav"
-    wav_file_full = "Audio/wav_full/maisky.wav"
-    mid_file = "Audio/midi/suite_3/cs3-1pre.mid"
+    wav_file_scale = "/Users/ethancobb/Documents/Thesis Data/Audio/test/maisky_scale.wav"
+    wav_file_full = "/Users/ethancobb/Documents/Thesis Data/Audio/wav_full/maisky.wav"
+    mid_file = "/Users/ethancobb/Documents/Thesis Data/Audio/midi/suite_3/cs3-1pre.mid"
     # freq_data = 'maisky_scale_frequency.csv'
 
     # note_freq_list = run_frequency_detection(wav_file_scale, mid_file, step_size=5, viterbi=True)

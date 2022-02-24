@@ -112,6 +112,7 @@ def calculate_reference_freq(key, freq_A4=440.0):
     if key == 'E#':
         return "haven't done yet"
     if key == 'F':
+        # note: this is the lower version of F; other version is a major third below A
         return freq_A4 * (2 / 3) ** 4
     if key == 'Fb':
         return "haven't done yet"
@@ -143,51 +144,23 @@ def create_note_ordering(key):
     if key == 'C':
         return ['C', 'Cb', 'C#', 'D', 'Db', 'D#', 'E', 'Eb', 'E#', 'F', 'Fb', 'F#',
                 'G', 'Gb', 'G#', 'A', 'Ab', 'A#', 'B', 'Bb', 'B#']
-    if key == 'Cb':
-        return "haven't done yet"
-    if key == 'C#':
-        return "haven't done yet"
     if key == 'D':
         return ['D', 'Db', 'D#', 'E', 'Eb', 'E#', 'F#', 'F', 'F##',
                 'G', 'Gb', 'G#', 'A', 'Ab', 'A#', 'B', 'Bb', 'B#', 'C#', 'C', 'C##']
-    if key == 'Db':
-        return "haven't done yet"
-    if key == 'D#':
-        return "haven't done yet"
     if key == 'E':
         return ['E', 'Eb', 'E#', 'F#', 'F', 'F##', 'G#', 'G', 'G##',
                 'A', 'Ab', 'A#', 'B', 'Bb', 'B#', 'C#', 'C', 'C##', 'D#', 'D', 'D##']
-    if key == 'Eb':
-        return "haven't done yet"
-    if key == 'E#':
-        return "haven't done yet"
     if key == 'F':
         return ['F', 'Fb', 'F#', 'G', 'Gb', 'G#', 'A', 'Ab', 'A#',
                 'Bb', 'Bbb', 'B', 'C', 'Cb', 'C#', 'D', 'Db', 'D#', 'E', 'Eb', 'E#']
-    if key == 'Fb':
-        return "haven't done yet"
-    if key == 'F#':
-        return "haven't done yet"
     if key == 'G':
         return ['G', 'Gb', 'G#', 'A', 'Ab', 'A#', 'B', 'Bb', 'B#', 'C', 'Cb', 'C#',
                 'D', 'Db', 'D#', 'E', 'Eb', 'E#', 'F#', 'F', 'F##']
-    if key == 'Gb':
-        return "haven't done yet"
-    if key == 'G#':
-        return "haven't done yet"
     if key == 'A':
         return ['A', 'Ab', 'A#', 'B', 'Bb', 'B#', 'C#', 'C', 'C##',
                 'D', 'Db', 'D#', 'E', 'Eb', 'E#', 'F#', 'F', 'F##', 'G#', 'G', 'G##']
-    if key == 'Ab':
-        return "haven't done yet"
-    if key == 'A#':
-        return "haven't done yet"
-    if key == 'B':
-        return "haven't done yet"
-    if key == 'Bb':
-        return "haven't done yet"
-    if key == 'B#':
-        return "haven't done yet"
+
+    raise NotImplementedError("%s not yet supported", key)
 
 
 def create_just_template(key, freq_A4=440.0):
@@ -279,6 +252,7 @@ def create_pythagorean_template(freq_A4=440.0):
 def get_change(current, previous):
     """
     Helper function to compute the percent difference between two values.
+    Computed as 1 - ratio(min, max)
     """
     if current == previous:
         return 100.0
@@ -288,11 +262,32 @@ def get_change(current, previous):
         return 0
 
 
+def get_change2(val1, val2):
+    """
+    Alternative implementation of percent difference between two values
+    Computed as 1 - ratio(min, max)
+    """
+    return 1 - min(val1, val2) / max(val1, val2)
+
+
+def calculate_delta_one_note(freq, stencil):
+    # we search each octave band for the closest frequency match
+    candidate_frequencies = [(min(stencil.items(), key=lambda x: abs(freq - x[1][i])))[1][i]
+                             for i in range(4)]
+    candidate_deltas = [get_change(candidate_frequencies[i], freq) for i in range(4)]
+    # the calculated delta is the lowest of these possible percent deviations
+    delta = min(candidate_deltas)
+
+    return delta
+
 def calculate_delta(time_freq_dict, stencil):
     """
     This is a helper function to go through note by note in the time-frequency dictionary
     and find the closest frequency in the tuning system stencil. It will then calculate
     the estimated frequency's percent deviation from whatever tuning system's approximation
+
+    Returns a dictionary with the same keys as time_freq_dict but the values are
+    deviations from the particular stencil.
     """
     # for each note in the time_freq_dict, match its value to the closest value in the
     # stencil dictionary and store it
@@ -310,13 +305,130 @@ def calculate_delta(time_freq_dict, stencil):
     return delta_dict
 
 
-def compare(time_freq_dict, tuning_system, key, freq_A4=440):
+def calculate_deltas(time_freq_dict, freq_A4=440):
     """
     Goes through entire time-frequency dictionary and calculates the delta
     with a particular tuning system stencil in a particular key on a
     note-by-note basis. Returns a dictionary with the same keys as time_freq_dict
     but with deltas for that particular tuning system as values.
 
+    time_freq_dict: dictionary
+    tuning_system: 'just', 'edo', 'pythagorean'
+    key: 'C', 'D', 'E', 'F', 'G', 'A'
+    """
+    # compute all possible just intonation stencils
+    c_just_template = create_just_template('C', freq_A4)
+    c_just_delta_dict = calculate_delta(time_freq_dict, c_just_template)
+
+    d_just_template = create_just_template('D', freq_A4)
+    d_just_delta_dict = calculate_delta(time_freq_dict, d_just_template)
+
+    e_just_template = create_just_template('E', freq_A4)
+    e_just_delta_dict = calculate_delta(time_freq_dict, e_just_template)
+
+    f_just_template = create_just_template('F', freq_A4)
+    f_just_delta_dict = calculate_delta(time_freq_dict, f_just_template)
+
+    g_just_template = create_just_template('G', freq_A4)
+    g_just_delta_dict = calculate_delta(time_freq_dict, g_just_template)
+
+    a_just_template = create_just_template('A', freq_A4)
+    a_just_delta_dict = calculate_delta(time_freq_dict, a_just_template)
+
+    edo_template = create_edo_template(freq_A4)
+    edo_delta_dict = calculate_delta(time_freq_dict, edo_template)
+
+    pythagorean_template = create_pythagorean_template(freq_A4)
+    pythagorean_delta_dict = calculate_delta(time_freq_dict, pythagorean_template)
+
+    return c_just_delta_dict, d_just_delta_dict, e_just_delta_dict, f_just_delta_dict, \
+           g_just_delta_dict, a_just_delta_dict, edo_delta_dict, pythagorean_delta_dict
+
+
+def calculate_cost(delta_dict):
+    """
+    Compute the cost of frequency deltas with a particular intonation system.
+    The cost is the average of the deltas.
+
+    delta_dict: dict;
+    """
+    return sum(delta_dict.values()) / len(delta_dict)
+
+
+def identify_intonation_system(freq, freq_A4=440.0):
+    """
+    This helper function takes a frequency as input and assigns a tuning system
+    label to each note in the dictionary based on the least deviation.
+    """
+    # compute all possible just intonation stencils
+    c_just_template = create_just_template('C', freq_A4)
+    c_just_delta = calculate_delta_one_note(freq, c_just_template)
+
+    d_just_template = create_just_template('D', freq_A4)
+    d_just_delta = calculate_delta_one_note(freq, d_just_template)
+
+    e_just_template = create_just_template('E', freq_A4)
+    e_just_delta = calculate_delta_one_note(freq, e_just_template)
+
+    f_just_template = create_just_template('F', freq_A4)
+    f_just_delta = calculate_delta_one_note(freq, f_just_template)
+
+    g_just_template = create_just_template('G', freq_A4)
+    g_just_delta = calculate_delta_one_note(freq, g_just_template)
+
+    a_just_template = create_just_template('A', freq_A4)
+    a_just_delta = calculate_delta_one_note(freq, a_just_template)
+
+    edo_template = create_edo_template(freq_A4)
+    edo_delta = calculate_delta_one_note(freq, edo_template)
+
+    pythagorean_template = create_pythagorean_template(freq_A4)
+    pythagorean_delta = calculate_delta_one_note(freq, pythagorean_template)
+
+    deltas = [c_just_delta, d_just_delta, e_just_delta, f_just_delta, g_just_delta,
+              a_just_delta, edo_delta, pythagorean_delta]
+
+    min_delta = min(deltas)
+    idx = deltas.index(min_delta)
+
+    if idx <= 5:
+        tuning_system = 'just'
+    elif idx == 6:
+        tuning_system = 'edo'
+    elif idx == 7:
+        tuning_system = 'pythagorean'
+
+    else:
+        raise ValueError
+
+    return tuning_system, min_delta
+
+
+def run_tuning_system_detection(time_freq_dict, freq_A4=440):
+    """
+    This function goes through the note dictionary and computes the deviation note by note from
+    the closest match frequency estimate for all tuning system stencils.
+
+    Returns a dictionary with the same keys as time_freq_dict but where the values are tuning system
+    labelings (e.g., 'just', edo', 'pythagorean')
+    """
+    result = OrderedDict()
+    # go through note by note and assign the tuning system labeling as the dict value
+    # with the least deviation for that particular frequency, keep track of the deviation value
+    for key in time_freq_dict:
+        freq = time_freq_dict[key]
+        tuning_system, deviation = identify_intonation_system(freq, freq_A4)
+        result[key] = tuning_system, deviation
+
+    return result
+
+
+def compare(time_freq_dict, tuning_system, key, freq_A4=440):
+    """
+    Goes through entire time-frequency dictionary and calculates the delta
+    with a particular tuning system stencil in a particular key on a
+    note-by-note basis. Returns a dictionary with the same keys as time_freq_dict
+    but with deltas for that particular tuning system as values.
     time_freq_dict: dictionary
     tuning_system: 'just', 'edo', 'pythagorean'
     key: 'C', 'D', 'E', 'F', 'G', 'A'
@@ -334,7 +446,7 @@ def compare(time_freq_dict, tuning_system, key, freq_A4=440):
         pythagorean_delta_dict = calculate_delta(time_freq_dict, pythagorean_template)
         return pythagorean_delta_dict
     else:
-        return 'unrecognized scale'
+        raise ValueError('unrecognized scale')
 
 
 if __name__ == "__main__":
@@ -349,6 +461,8 @@ if __name__ == "__main__":
     #     print(f"{note} just: {c_just_template[note]}, pythagorean: {pythagorean_template[note]}")
 
     d_just_template = create_just_template('D', 441.0)
+    # print(d_just_template)
+
     d_just_set = set(d_just_template)
     # for note in c_just_set.intersection(d_just_set):
     #     print(f"{note} c major: {c_just_template[note]}, d major: {d_just_template[note]}")
@@ -357,7 +471,6 @@ if __name__ == "__main__":
     f_just_set = set(f_just_template)
     # for note in f_just_set.intersection(pythagorean_set):
     #     print(f"{note} just: {f_just_template[note]}, pythagorean: {pythagorean_template[note]}")
-    # print(d_just_template)
     # print(c_just_template)
 
     edo_template = create_edo_template(441.0)
@@ -366,7 +479,8 @@ if __name__ == "__main__":
     #     print(f"{note} edo: {edo_template[note]}, pythagorean: {pythagorean_template[note]}")
     sample_time_freq_dict = OrderedDict()
     sample_time_freq_dict = {(0, .49): 260.5, (.5, 1.0): 120}
-    test_c = compare(sample_time_freq_dict, 'just', 'C', 441)
-    test_g = compare(sample_time_freq_dict, 'just', 'D', 441)
+    # print(run_tuning_system_detection(sample_time_freq_dict, 440))
+    # test_c = compare(sample_time_freq_dict, 'just', 'C', 441)
+    # test_g = compare(sample_time_freq_dict, 'just', 'D', 441)
     # print(test_c)
     # print(test_g)
