@@ -474,19 +474,21 @@ def identify_tuning_system(ref_pitch, scale_freq):
 if __name__ == "__main__":
     # mid_file = "/Users/ethancobb/Documents/Thesis Data/Audio/midi/suite_3/cs3-1pre.mid"
     # actual_notes = load_actual_notes(mid_file)
-    step_size = 5
+    step_size = 10
     # time, frequency, confidence, act = run_crepe("/Users/ethancobb/Documents/Thesis
     # Data/Audio/test/maisky_scale.wav", step_size)
     time, frequency, confidence, act = run_crepe("/Users/ethancobb/Documents/Thesis Data/Audio/test/test.wav", step_size)
-
-    frequency_clean, conf_perc = clean_frequency(frequency, confidence, conf_thresh=.9)
-    print(conf_perc)
-
-    time_freq_dict = calc_fundamental_freq_with_diff3(time, frequency_clean, step_size)
-    print(time_freq_dict)
-    time_freq_conf = np.array([time, frequency, confidence])
-    time_freq_conf_clean = np.array([time, frequency_clean, confidence])
-    print(freq_to_notes(time_freq_dict.values()))
-    answer = {'C': 261.63, 'D': 293.66974569918125, 'E': 329.63314428399565,
-              'F': 349.2341510465061, 'G': 392.0020805232462, 'A': 440.00745824565865,
-              'B': 493.8916728538229}
+    import array_to_latex as a2l
+    A = np.array([time, frequency, confidence])
+    a2l.to_clp(A, frmt='{:6.2f}', arraytype='array')
+    # frequency_clean, conf_perc = clean_frequency(frequency, confidence, conf_thresh=.9)
+    # print(conf_perc)
+    #
+    # time_freq_dict = calc_fundamental_freq_with_diff3(time, frequency_clean, step_size)
+    # print(time_freq_dict)
+    # time_freq_conf = np.array([time, frequency, confidence])
+    # time_freq_conf_clean = np.array([time, frequency_clean, confidence])
+    # print(freq_to_notes(time_freq_dict.values()))
+    # answer = {'C': 261.63, 'D': 293.66974569918125, 'E': 329.63314428399565,
+    #           'F': 349.2341510465061, 'G': 392.0020805232462, 'A': 440.00745824565865,
+    #           'B': 493.8916728538229}

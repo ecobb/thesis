@@ -27,10 +27,10 @@ def create_just_template(ref_pitch):
 
     return ref_pitch * np.array(just_scale_float)
 
-# Pythagorean
+# pythag
 
-def create_pythagorean_template(ref_pitch):
-    pythagorean_scale = create_pythagorean_scale()
+def create_pythag_template(ref_pitch):
+    pythag_scale = create_pythag_scale()
     pythagorean_scale_float = [i.evalf() for i in pythagorean_scale]
 
     return ref_pitch * np.array(pythagorean_scale_float)
