@@ -1,19 +1,7 @@
-import fmplib as fmp
-import numpy as np
-from scipy.io import wavfile
-import matplotlib.pyplot as plt
-import IPython.display as ipd
-import crepe
-import tensorflow
-from collections import OrderedDict
-
 import sys
-import csv
-
 sys.path.append('/Users/ethancobb/Documents/Thesis/Code/Modules')
-import midi_tools
-import tuning_systems
-import freq_detection
+from Modules import midi_tools, freq_detection
+import numpy as np
 
 
 def run_frequency_detection(audio_file, mid_file, step_size=10, viterbi=True,
@@ -90,7 +78,8 @@ if __name__ == "__main__":
     vogler_scale = "/Users/ethancobb/Documents/Thesis Data/Audio/suite3/prelude/scale/vogler_scale.wav"
     wispelwey_scale = "/Users/ethancobb/Documents/Thesis Data/Audio/suite3/prelude/scale/wispelwey_scale.wav"
 
-    c_major_scale = "/Users/ethancobb/Documents/Thesis Data/Audio/test/test_just.wav"
+    just_scale = "/Users/ethancobb/Documents/Thesis Data/Audio/test/test_just.wav"
+    pythag_scale = "/Users/ethancobb/Documents/Thesis Data/Audio/scales/audio/pythag_scale.wav"
 
     # wav_file_full = "/Users/ethancobb/Documents/Thesis Data/Audio/wav_full/maisky.wav"
     # mid_file = "/Users/ethancobb/Documents/Thesis Data/Audio/midi/suite_3/cs3-1pre.mid"
@@ -100,10 +89,11 @@ if __name__ == "__main__":
     # run_frequency_detection3(wav_file_scale, step_size=5, save_freq_and_conf=False,
     #                          time_freq_output_file='time_freq_test_scale.csv', freq_output_file=
     #                          'maisky_scale_freq.csv')
-    res = run_frequency_detection3(cobb_scale, step_size=5, save_freq_and_conf=False,
-                                                               time_freq_output_file='', freq_output_file=
-                                                               '', conf_thresh=.8)
+    res = run_frequency_detection3(pythag_scale, step_size=5, save_freq_and_conf=False,
+                                   time_freq_output_file='', freq_output_file=
+                                   '', conf_thresh=.8)
     freq = list(res.values())
     print(freq)
     print([midi_tools.freq2str(f) for f in freq])
-
+    pythag_answer = np.array([220., 247.5, 278.4375, 293.33333333,
+                              330., 371.25, 417.65625, 440.])

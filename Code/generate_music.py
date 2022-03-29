@@ -128,7 +128,7 @@ if __name__ == '__main__':
     # make_just_scale(220.0, duration=.5, filename=just_file_path)
     # edo_file_path = '/Users/ethancobb/Documents/Thesis Data/Audio/test/test_edo.wav'
     # make_edo_scale(duration=.5, filename=edo_file_path, chromatic=False)
-    # pythag_file_path = '/Users/ethancobb/Documents/Thesis Data/Audio/test/test_pythag.wav'
-    # make_pythag_scale(220.0, duration=.5, filename=pythag_file_path)
-    random_just_file_path = '/Users/ethancobb/Documents/Thesis Data/Audio/test/test_random_just.wav'
-    make_random_just_audio(duration=.5, filename=random_just_file_path)
+    pythag_file_path = '/Users/ethancobb/Documents/Thesis Data/Audio/test/test_pythag.wav'
+    make_pythag_scale(220.0, duration=.5, filename=pythag_file_path)
+    # random_just_file_path = '/Users/ethancobb/Documents/Thesis Data/Audio/test/test_random_just.wav'
+    # make_random_just_audio(duration=.5, filename=random_just_file_path)
